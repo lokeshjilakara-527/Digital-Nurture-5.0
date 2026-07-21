@@ -1,0 +1,52 @@
+{
+  "info": {
+    "name": "Week2 Country API",
+    "description": "Sample requests for the SpringDataJPA Country app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get all countries",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/countries",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "countries"]
+        }
+      }
+    },
+    {
+      "name": "Get country by code",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/countries/IN",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "countries", "IN"]
+        }
+      }
+    },
+    {
+      "name": "Add new country",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:8080/api/countries?code=DE&name=Germany",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "countries"],
+          "query": [
+            { "key": "code", "value": "DE" },
+            { "key": "name", "value": "Germany" }
+          ]
+        }
+      }
+    }
+  ]
+}
