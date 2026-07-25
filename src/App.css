@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#eef2f7;
+    color:#222;
+}
+
+.app{
+    width:95%;
+    max-width:1350px;
+    margin:auto;
+    padding:35px 20px;
+}
+
+/* ---------- HEADER ---------- */
+
+header{
+    background:linear-gradient(135deg,#2563eb,#0f172a);
+    color:white;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    margin-bottom:30px;
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
+}
+
+header h1{
+    font-size:2.6rem;
+    margin-bottom:10px;
+}
+
+.sub{
+    color:#dbeafe;
+    font-size:16px;
+}
+
+/* ---------- TABS ---------- */
+
+.tabs{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.tab{
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:white;
+    color:#1e293b;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.tab:hover{
+    background:#2563eb;
+    color:white;
+    transform:translateY(-3px);
+}
+
+.tab.active{
+    background:#2563eb;
+    color:white;
+}
+
+/* ---------- CONTENT ---------- */
+
+.demo{
+    background:white;
+    border-radius:18px;
+    padding:35px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    min-height:500px;
+}
+
+.demo h2{
+    color:#2563eb;
+    margin-bottom:25px;
+    border-left:5px solid #2563eb;
+    padding-left:12px;
+}
+
+.demo h3{
+    margin:20px 0 10px;
+    color:#1e293b;
+}
+
+.demo p{
+    margin:10px 0;
+    line-height:1.7;
+}
+
+/* ---------- BUTTON ---------- */
+
+button{
+    font-family:inherit;
+}
+
+.demo button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:8px;
+    padding:11px 22px;
+    margin:8px 8px 8px 0;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.demo button:hover{
+    background:#1d4ed8;
+}
+
+/* ---------- INPUT ---------- */
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:12px;
+    margin:10px 0 18px;
+    border-radius:8px;
+    border:1px solid #d1d5db;
+    font-size:15px;
+    transition:.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    outline:none;
+    border-color:#2563eb;
+    box-shadow:0 0 5px rgba(37,99,235,.3);
+}
+
+/* ---------- CARD ---------- */
+
+.card{
+    background:#f8fafc;
+    border-left:5px solid #2563eb;
+    border-radius:12px;
+    padding:20px;
+    margin:18px 0;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.title{
+    color:#2563eb;
+    font-size:20px;
+    font-weight:600;
+}
+
+/* ---------- TABLE ---------- */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+table th{
+    background:#2563eb;
+    color:white;
+    padding:12px;
+}
+
+table td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+}
+
+/* ---------- IMAGE ---------- */
+
+img{
+    width:250px;
+    border-radius:10px;
+    margin:15px 0;
+}
+
+/* ---------- LIST ---------- */
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin:8px 0;
+}
+
+/* ---------- HR ---------- */
+
+hr{
+    margin:25px 0;
+    border:none;
+    border-top:1px solid #ddd;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+    margin-top:30px;
+    text-align:center;
+    color:#666;
+}
+
+/* ---------- SCROLLBAR ---------- */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563eb;
+    border-radius:20px;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:768px){
+
+header h1{
+font-size:2rem;
+}
+
+.tabs{
+grid-template-columns:1fr;
+}
+
+.demo{
+padding:20px;
+}
+
+}
