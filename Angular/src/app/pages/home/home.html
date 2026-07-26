@@ -1,0 +1,19 @@
+<section class="home">
+  <!-- 1) interpolation -->
+  <h1>{{ portalName }}</h1>
+  <p>Browse courses, enrol, and track your grades — all in one place.</p>
+
+  <div class="stats">
+    <div class="stat"><b>{{ coursesAvailable }}</b><span>Courses Available</span></div>
+    <div class="stat"><b>{{ enrolled }}</b><span>Enrolled</span></div>
+    <div class="stat"><b>{{ gpa }}</b><span>GPA</span></div>
+  </div>
+
+  <!-- 2) property binding [disabled] (one-way: component → DOM)  +  3) event binding (click) -->
+  <button [disabled]="!isPortalActive" (click)="onEnrollClick()">Enroll Now</button>
+  <p *ngIf="message" class="msg">{{ message }}</p>
+
+  <!-- 4) two-way binding [(ngModel)] (DOM ↔ component) -->
+  <input [(ngModel)]="searchTerm" placeholder="Search courses" />
+  <p>Searching for: {{ searchTerm }}</p>
+</section>

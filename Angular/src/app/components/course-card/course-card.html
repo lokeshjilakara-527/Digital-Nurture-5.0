@@ -1,0 +1,19 @@
+<div class="card" [ngClass]="cardClasses" [ngStyle]="{ 'border-left': '6px solid ' + borderColor }">
+  <h3>{{ course.name }}</h3>
+  <p>Code: {{ course.code }}</p>
+  <!-- custom pipe -->
+  <p>{{ course.credits | creditLabel }}</p>
+
+  <!-- *ngSwitch grade badge -->
+  <ng-container [ngSwitch]="course.gradeStatus">
+    <span *ngSwitchCase="'passed'" class="badge passed">Passed</span>
+    <span *ngSwitchCase="'failed'" class="badge failed">Failed</span>
+    <span *ngSwitchDefault class="badge pending">Pending</span>
+  </ng-container>
+
+  <div class="actions">
+    <button (click)="enrollRequested.emit(course.id)">Enroll</button>
+    <button (click)="isExpanded = !isExpanded">Show Details</button>
+  </div>
+  <p *ngIf="isExpanded" class="details">Course #{{ course.id }} — {{ course.credits }} credit(s).</p>
+</div>

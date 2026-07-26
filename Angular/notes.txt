@@ -1,0 +1,12 @@
+Angular project file purposes (HOL 1, Task 1):
+- angular.json        : workspace/build configuration (projects, builder options, budgets, assets, styles).
+- tsconfig.json       : base TypeScript compiler options shared across the workspace.
+- tsconfig.app.json   : TS config specific to the application build (extends the base).
+- package.json        : project metadata, dependencies, and npm scripts (start, build, test).
+- src/main.ts         : application entry point — bootstraps the root App component (standalone).
+- src/app/app.config.ts : standalone application config — providers (router, etc.) [replaces app.module.ts].
+- src/app/app.ts      : the root component (selector app-root) that hosts the header and router-outlet.
+- src/index.html      : the single HTML page; <app-root> is where Angular renders the app.
+
+Budgets (angular.json > architect > build > configurations > production):
+- maximumWarning / maximumError control bundle-size thresholds; exceeding them warns or fails the build.

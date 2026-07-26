@@ -1,0 +1,4 @@
+.nav { display: flex; gap: 1rem; align-items: center; padding: 1rem 1.5rem; background: #0b1220; color: #fff; }
+.brand { font-weight: 700; margin-right: auto; }
+.nav a { color: #cbd5e1; text-decoration: none; }
+.nav a.active { color: #34d399; font-weight: 600; }
